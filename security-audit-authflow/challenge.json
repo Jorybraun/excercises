@@ -1,0 +1,65 @@
+{
+  "id": "security-audit-authflow",
+  "title": "Authentication Security Audit",
+  "category": "Security",
+  "difficulty": "Hard",
+  "estimatedTimeMinutes": 180,
+  "objectives": [
+    "Identify security vulnerabilities in authentication system",
+    "Implement proper security measures and best practices",
+    "Understand common attack vectors and mitigation strategies",
+    "Apply secure coding principles to authentication flows"
+  ],
+  "requirements": [
+    "Audit the provided intentionally vulnerable authentication system",
+    "Identify and document at least 5 security vulnerabilities",
+    "Implement fixes for identified security issues",
+    "Add proper input validation and sanitization",
+    "Implement secure session management",
+    "Add rate limiting and brute force protection",
+    "Ensure passwords are properly hashed and salted"
+  ],
+  "stretchGoals": [
+    "Implement multi-factor authentication (MFA)",
+    "Add OAuth2/OpenID Connect support",
+    "Implement account lockout policies",
+    "Add audit logging for security events",
+    "Implement CSRF protection",
+    "Add security headers and HTTPS enforcement"
+  ],
+  "constraints": [
+    "Start with the provided vulnerable baseline implementation",
+    "Document each vulnerability found with explanation",
+    "Maintain backward compatibility with existing API endpoints",
+    "Use only native Node.js modules or well-established security libraries"
+  ],
+  "evaluationCriteria": {
+    "correctness": true,
+    "codeQuality": true,
+    "tests": false,
+    "performance": false,
+    "security": true,
+    "design": true
+  },
+  "starter": {
+    "entry": "src/auth.js",
+    "scripts": {
+      "start": "node src/server.js",
+      "test": "node test/auth.test.js"
+    }
+  },
+  "sampleInput": {
+    "username": "testuser",
+    "password": "password123"
+  },
+  "sampleOutput": {
+    "token": "jwt-token-here",
+    "user": {
+      "id": 1,
+      "username": "testuser",
+      "role": "user"
+    }
+  },
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0"
+}

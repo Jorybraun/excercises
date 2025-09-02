@@ -1,0 +1,16 @@
+{
+  "name": "algorithm-pathfinder",
+  "version": "1.0.0",
+  "description": "Pathfinding algorithm challenge with portals and weighted terrain",
+  "type": "module",
+  "main": "src/pathfinder.js",
+  "scripts": {
+    "test": "node test/pathfinder.test.js"
+  },
+  "keywords": [
+    "algorithm",
+    "pathfinding",
+    "dijkstra",
+    "graph"
+  ]
+}

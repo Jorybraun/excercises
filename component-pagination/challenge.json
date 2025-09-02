@@ -1,0 +1,64 @@
+{
+  "id": "component-pagination",
+  "title": "Pagination Component",
+  "category": "Component",
+  "difficulty": "Easy",
+  "estimatedTimeMinutes": 60,
+  "objectives": [
+    "Create a reusable pagination component with clean state management",
+    "Implement navigation controls with boundary handling",
+    "Support configurable page sizes and display options",
+    "Provide accessible and intuitive user interface"
+  ],
+  "requirements": [
+    "Create createPaginator function that returns pagination state and controls",
+    "Support navigation: first, previous, next, last, and direct page selection",
+    "Handle edge cases: first/last page boundaries, invalid page numbers",
+    "Implement renderControls function for basic UI representation",
+    "Support customizable items per page and total items count",
+    "Provide state snapshot for testing and debugging"
+  ],
+  "stretchGoals": [
+    "Add keyboard navigation support (arrow keys, Enter)",
+    "Implement URL synchronization for browser back/forward",
+    "Support custom rendering templates",
+    "Add accessibility features (ARIA labels, screen reader support)"
+  ],
+  "constraints": [
+    "Pure JavaScript implementation (no external UI libraries)",
+    "State should be immutable and predictable",
+    "Component should work in both browser and Node.js environments",
+    "Maximum 1000 pages for performance considerations"
+  ],
+  "evaluationCriteria": {
+    "correctness": true,
+    "codeQuality": true,
+    "tests": true,
+    "performance": false,
+    "security": false,
+    "design": true
+  },
+  "starter": {
+    "entry": "src/pagination.js",
+    "scripts": {
+      "test": "node test/pagination.test.js"
+    }
+  },
+  "sampleInput": {
+    "totalItems": 150,
+    "itemsPerPage": 10,
+    "currentPage": 3
+  },
+  "sampleOutput": {
+    "currentPage": 3,
+    "totalPages": 15,
+    "totalItems": 150,
+    "itemsPerPage": 10,
+    "hasNext": true,
+    "hasPrevious": true,
+    "startIndex": 20,
+    "endIndex": 29
+  },
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0"
+}

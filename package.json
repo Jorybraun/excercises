@@ -1,0 +1,29 @@
+{
+  "name": "interview-challenges",
+  "version": "1.0.0",
+  "description": "Technical interview challenges with executable starter code",
+  "type": "module",
+  "workspaces": [
+    "algorithm-pathfinder",
+    "api-weather-aggregator",
+    "component-pagination",
+    "db-query-optimizer",
+    "security-audit-authflow"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "validate": "node scripts/validate-challenges.mjs"
+  },
+  "keywords": [
+    "interview",
+    "challenges",
+    "technical",
+    "algorithms",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "db-query-optimizer",
+  "title": "Database Query Optimizer",
+  "category": "Database",
+  "difficulty": "Hard",
+  "estimatedTimeMinutes": 150,
+  "objectives": [
+    "Optimize database query performance through algorithm improvements",
+    "Implement indexing and data structure optimizations",
+    "Measure and compare performance using benchmarking",
+    "Handle large datasets efficiently with memory management"
+  ],
+  "requirements": [
+    "Implement optimized version of provided naive query algorithms",
+    "Support filtering, sorting, and joining operations on in-memory datasets",
+    "Achieve significant performance improvement over naive implementation",
+    "Maintain correctness while optimizing for speed",
+    "Include benchmarking script to measure performance gains",
+    "Handle datasets with up to 100,000 records efficiently"
+  ],
+  "stretchGoals": [
+    "Implement B-tree or hash indexing for faster lookups",
+    "Add support for complex query planning and optimization",
+    "Implement memory-efficient streaming for very large datasets",
+    "Add query caching with LRU eviction policy"
+  ],
+  "constraints": [
+    "Work with in-memory data structures (no actual database)",
+    "Pure JavaScript implementation without external libraries",
+    "Memory usage should scale reasonably with data size",
+    "Preserve original query semantics and results"
+  ],
+  "evaluationCriteria": {
+    "correctness": true,
+    "codeQuality": true,
+    "tests": true,
+    "performance": true,
+    "security": false,
+    "design": true
+  },
+  "starter": {
+    "entry": "src/optimized.js",
+    "scripts": {
+      "test": "node test/optimizer.test.js",
+      "bench": "node src/bench.js"
+    }
+  },
+  "sampleInput": {
+    "users": [
+      {"id": 1, "name": "Alice", "age": 25, "city": "NYC"},
+      {"id": 2, "name": "Bob", "age": 30, "city": "SF"}
+    ],
+    "orders": [
+      {"id": 101, "userId": 1, "amount": 100, "date": "2024-01-01"},
+      {"id": 102, "userId": 2, "amount": 200, "date": "2024-01-02"}
+    ]
+  },
+  "sampleOutput": [
+    {"name": "Alice", "totalAmount": 100},
+    {"name": "Bob", "totalAmount": 200}
+  ],
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0"
+}
