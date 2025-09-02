@@ -1,0 +1,17 @@
+{
+  "name": "db-query-optimizer",
+  "version": "1.0.0",
+  "description": "Database query optimization challenge with performance benchmarking",
+  "type": "module",
+  "main": "src/optimized.js",
+  "scripts": {
+    "test": "node test/optimizer.test.js",
+    "bench": "node src/bench.js"
+  },
+  "keywords": [
+    "database",
+    "optimization",
+    "performance",
+    "algorithms"
+  ]
+}

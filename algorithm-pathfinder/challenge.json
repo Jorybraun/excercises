@@ -1,0 +1,54 @@
+{
+  "id": "algorithm-pathfinder",
+  "title": "Pathfinder with Portals",
+  "category": "Algorithm",
+  "difficulty": "Medium",
+  "estimatedTimeMinutes": 90,
+  "objectives": [
+    "Implement Dijkstra's algorithm for shortest path finding",
+    "Handle weighted terrain with different movement costs",
+    "Support portal teleportation mechanics",
+    "Optimize performance for larger grids"
+  ],
+  "requirements": [
+    "Find shortest path from start to goal in a 2D grid",
+    "Handle walls (impassable terrain marked with '#')",
+    "Support weighted terrain (digits 1-9 represent movement cost)",
+    "Implement portal teleportation (letters A-Z represent bidirectional portals)",
+    "Return path as array of [row, col] coordinates"
+  ],
+  "stretchGoals": [
+    "Support multiple goals and return paths to all",
+    "Add visualization of the pathfinding process",
+    "Implement A* algorithm as alternative",
+    "Handle dynamic obstacles that change during pathfinding"
+  ],
+  "constraints": [
+    "Grid dimensions up to 100x100",
+    "Maximum 26 portal pairs (A-Z)",
+    "Must handle edge cases (no path, start == goal)",
+    "Time complexity should be reasonable for given constraints"
+  ],
+  "evaluationCriteria": {
+    "correctness": true,
+    "codeQuality": true,
+    "tests": true,
+    "performance": true,
+    "security": false,
+    "design": true
+  },
+  "starter": {
+    "entry": "src/pathfinder.js",
+    "scripts": {
+      "test": "node test/pathfinder.test.js"
+    }
+  },
+  "sampleInput": [
+    ["S", "1", "1", "#"],
+    ["1", "#", "A", "1"],
+    ["2", "A", "1", "G"]
+  ],
+  "sampleOutput": [[0, 0], [2, 1], [2, 2], [1, 2], [2, 3]],
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0"
+}

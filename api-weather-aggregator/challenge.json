@@ -1,0 +1,60 @@
+{
+  "id": "api-weather-aggregator",
+  "title": "Weather Data Aggregator",
+  "category": "API",
+  "difficulty": "Medium",
+  "estimatedTimeMinutes": 120,
+  "objectives": [
+    "Build a REST API that aggregates weather data from multiple sources",
+    "Implement request rate limiting and concurrent request management",
+    "Add in-memory caching with TTL (time-to-live)",
+    "Handle API failures gracefully with fallback strategies"
+  ],
+  "requirements": [
+    "Create HTTP server that accepts GET /weather?city=<name> requests",
+    "Aggregate data from at least 2 weather APIs",
+    "Implement concurrent request limiting (max 5 simultaneous requests)",
+    "Cache responses for 10 minutes to reduce API calls",
+    "Return unified JSON response with temperature, humidity, and description",
+    "Handle network errors and API rate limits gracefully"
+  ],
+  "stretchGoals": [
+    "Add support for geolocation coordinates",
+    "Implement webhook notifications for weather alerts",
+    "Add metrics collection and monitoring endpoints",
+    "Support batch requests for multiple cities"
+  ],
+  "constraints": [
+    "Use only native Node.js modules (http, fetch)",
+    "No external HTTP libraries like axios or request",
+    "Implement custom rate limiting without external packages",
+    "Memory cache only (no Redis or external storage)"
+  ],
+  "evaluationCriteria": {
+    "correctness": true,
+    "codeQuality": true,
+    "tests": true,
+    "performance": true,
+    "security": false,
+    "design": true
+  },
+  "starter": {
+    "entry": "src/server.js",
+    "scripts": {
+      "start": "node src/server.js",
+      "test": "node test/weather.test.js"
+    }
+  },
+  "sampleInput": "GET /weather?city=London",
+  "sampleOutput": {
+    "city": "London",
+    "temperature": 18.5,
+    "humidity": 65,
+    "description": "Partly cloudy",
+    "sources": ["openweather", "weatherapi"],
+    "cached": false,
+    "timestamp": "2024-01-01T12:00:00Z"
+  },
+  "version": "1.0.0",
+  "schemaVersion": "1.0.0"
+}

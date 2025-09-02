@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/challenge-schema.json",
+  "title": "Interview Challenge Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "category",
+    "difficulty",
+    "estimatedTimeMinutes",
+    "objectives",
+    "requirements",
+    "stretchGoals",
+    "constraints",
+    "evaluationCriteria",
+    "starter",
+    "sampleInput",
+    "sampleOutput",
+    "version",
+    "schemaVersion"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the challenge"
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable title of the challenge"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["Algorithm", "API", "Component", "Database", "Security"],
+      "description": "Category of the challenge"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["Easy", "Medium", "Hard"],
+      "description": "Difficulty level of the challenge"
+    },
+    "estimatedTimeMinutes": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Estimated time to complete the challenge in minutes"
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of learning objectives"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of functional requirements"
+    },
+    "stretchGoals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional advanced features"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Implementation constraints"
+    },
+    "evaluationCriteria": {
+      "type": "object",
+      "properties": {
+        "correctness": {
+          "type": "boolean"
+        },
+        "codeQuality": {
+          "type": "boolean"
+        },
+        "tests": {
+          "type": "boolean"
+        },
+        "performance": {
+          "type": "boolean"
+        },
+        "security": {
+          "type": "boolean"
+        },
+        "design": {
+          "type": "boolean"
+        }
+      },
+      "description": "Evaluation criteria flags"
+    },
+    "starter": {
+      "type": "object",
+      "required": ["entry", "scripts"],
+      "properties": {
+        "entry": {
+          "type": "string",
+          "description": "Main entry file"
+        },
+        "scripts": {
+          "type": "object",
+          "description": "npm scripts"
+        }
+      }
+    },
+    "sampleInput": {
+      "description": "Sample input data"
+    },
+    "sampleOutput": {
+      "description": "Expected sample output"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the challenge"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "description": "Version of the schema used"
+    }
+  }
+}

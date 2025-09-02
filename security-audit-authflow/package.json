@@ -1,0 +1,17 @@
+{
+  "name": "security-audit-authflow",
+  "version": "1.0.0",
+  "description": "Authentication security audit challenge with intentionally vulnerable baseline",
+  "type": "module",
+  "main": "src/auth.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/auth.test.js"
+  },
+  "keywords": [
+    "security",
+    "authentication",
+    "audit",
+    "vulnerability"
+  ]
+}

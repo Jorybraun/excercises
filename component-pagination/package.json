@@ -1,0 +1,16 @@
+{
+  "name": "component-pagination",
+  "version": "1.0.0",
+  "description": "Reusable pagination component with state management",
+  "type": "module",
+  "main": "src/pagination.js",
+  "scripts": {
+    "test": "node test/pagination.test.js"
+  },
+  "keywords": [
+    "component",
+    "pagination",
+    "ui",
+    "state-management"
+  ]
+}
